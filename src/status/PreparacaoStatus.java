@@ -2,27 +2,28 @@ package status;
 
 import pedido.Pedido;
 
-public class PreparacaoStatus implements Status{
-    Pedido pedido;
+public class PreparacaoStatus extends Status{
 
-    PreparacaoStatus(Pedido pedido){
-        this.pedido = pedido;
+    public PreparacaoStatus(Pedido pedido){
+        super(pedido);
     }
 
     @Override
     public String onPreparacao() {
-        return "O pedido está sendo sendo separado no centro de distribuição para envio à\n" +
+        this.pedido.setStatus(new PreparacaoStatus(this.pedido));
+        return "O pedido está sendo separado para ser entregue a\n" +
                 "transportadora.";
     }
 
     @Override
     public String onTransporte() {
-        return "Aguardando o pedido ser entregue a transportadora";
+        this.pedido.setStatus(new TransportandoStatus(this.pedido));
+        return "O pedido foi ao centro de distribuição";
     }
 
     @Override
     public String onRecebido() {
-        return "Aguardando o pedido ser recebido pelo destinatário";
+        return "Aguardando chegar ao centro de distribuição";
     }
 
     @Override
