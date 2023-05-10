@@ -6,7 +6,7 @@ import pedido.Pedido;
 public abstract class Status {
     public Pedido pedido;
 
-    Status(Pedido pedido){
+    public Status(Pedido pedido){
         this.pedido = pedido;
     }
 

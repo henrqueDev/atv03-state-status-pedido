@@ -2,6 +2,8 @@
 import pedido.Item;
 import pedido.Pedido;
 import status.FinalizadoStatus;
+import status.PreparacaoStatus;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

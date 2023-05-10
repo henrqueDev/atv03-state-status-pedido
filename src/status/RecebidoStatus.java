@@ -4,7 +4,7 @@ import pedido.Pedido;
 
 public class RecebidoStatus extends Status{
 
-    RecebidoStatus(Pedido pedido){
+    public RecebidoStatus(Pedido pedido){
         super(pedido);
     }
 
