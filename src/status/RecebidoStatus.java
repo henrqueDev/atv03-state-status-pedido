@@ -24,7 +24,7 @@ public class RecebidoStatus extends Status{
 
     @Override
     public String onRecebido() {
-        return "Pedido recebido pelo destinatário!";
+        return "Pedido recebido pelo destinatário! Aguardando cliente finalizar pedido!";
     }
 
     @Override
