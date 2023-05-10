@@ -14,7 +14,7 @@ public class Main {
         Pedido pedido = new Pedido(itens);
         while(pedido.getStatus().getClass() != FinalizadoStatus.class){
 
-            System.out.println("\nOPCAO 1 -> Preparacao");
+            System.out.println("\nOPCAO 1 -> Preparacao/Devolução");
             System.out.println("OPCAO 2 -> Colocar para transporte");
             System.out.println("OPCAO 3 -> Receber pedido");
             System.out.println("OPCAO 4 -> Finalizar pedido");

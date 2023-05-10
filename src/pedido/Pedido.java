@@ -10,21 +10,29 @@ import java.util.List;
 public class Pedido {
     private List<Item> items;
 
+    private List<Item> itemsConfirmados;
+
     private Boolean confirmacaoEntrega;
 
-
     private Status status;
+
 
     public Pedido(List<Item> items) {
         this.items = items;
         this.confirmacaoEntrega= false;
         this.status = new PreparacaoStatus(this);
+        this.itemsConfirmados = new ArrayList<Item>();
     }
 
 
     public List<Item> getItems() {
         return items;
     }
+
+    public List<Item> getItemsConfirmados() {
+        return itemsConfirmados;
+    }
+
 
 
     public Boolean getconfirmacaoEntrega() {
