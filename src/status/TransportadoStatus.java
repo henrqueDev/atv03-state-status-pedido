@@ -33,12 +33,14 @@ public class TransportadoStatus extends Status{
             Boolean confirm = option.toLowerCase().equals("s") ? true : false;
             if(confirm) {
                 this.pedido.getItems().remove(item);
+                this.pedido.getItemsConfirmados().add(item);
                 System.out.println("Item de id " + item.getId() + " confirmado!" );
             }else{
                 System.out.println("Item de id " + item.getId() + " rejeitado!" );
             }
             this.pedido.setconfirmacaoEntrega(confirm);
         }
+
         this.pedido.setStatus(new RecebidoStatus(this.pedido));
         return "Pedido entregue ao destinatário";
     }

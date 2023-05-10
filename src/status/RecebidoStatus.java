@@ -21,11 +21,7 @@ public class RecebidoStatus extends Status{
 
     @Override
     public String onRecebido() {
-        /*if(!this.pedido.getconfirmacaoEntrega()){
-            return "Pedido saiu do centro de distribuição para entrega ao destinatário ";
-        }*/
-        //this.pedido.setStatus(new RecebidoStatus(this.pedido));
-        return "Pedido recebido!";
+        return "Pedido recebido pelo destinatário!";
     }
 
     @Override
@@ -34,6 +30,7 @@ public class RecebidoStatus extends Status{
             this.pedido.setStatus(new PreparacaoStatus(this.pedido));
             return "Pedido não foi aceito pelo destinatário! Devolvendo para a loja para devolução do pedido";
         }
+        System.out.println("Os items " + this.pedido.getItemsConfirmados() + " Foram confirmados");
         this.pedido.setStatus(new FinalizadoStatus(this.pedido));
         return "Pedido finalizado";
     }
