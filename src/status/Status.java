@@ -4,7 +4,7 @@ import pedido.Pedido;
 
 // Status interface
 public abstract class Status {
-    Pedido pedido;
+    public Pedido pedido;
 
     Status(Pedido pedido){
         this.pedido = pedido;

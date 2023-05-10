@@ -12,6 +12,7 @@ public class Pedido {
 
     private Boolean confirmacaoEntrega;
 
+
     private Status status;
 
     public Pedido(List<Item> items) {

@@ -21,11 +21,10 @@ public class FinalizadoStatus extends Status{
     @Override
     public String onRecebido() {
         return "Pedido finalizado";
-
     }
 
     @Override
     public String onFinalizado() {
-        return "Pedido finalizado";
+        return "Pedido finalizadoo!";
     }
 }

@@ -17,8 +17,8 @@ public class PreparacaoStatus extends Status{
 
     @Override
     public String onTransporte() {
-        this.pedido.setStatus(new TransportandoStatus(this.pedido));
-        return "O pedido foi ao centro de distribuição";
+        this.pedido.setStatus(new TransportadoStatus(this.pedido));
+        return "O pedido chegou no centro de distribuição e está a caminho do destinatário";
     }
 
     @Override
