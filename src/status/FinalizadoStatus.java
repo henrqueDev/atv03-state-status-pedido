@@ -4,7 +4,7 @@ import pedido.Pedido;
 
 public class FinalizadoStatus extends Status{
 
-    FinalizadoStatus(Pedido pedido){
+    public FinalizadoStatus(Pedido pedido){
         super(pedido);
     }
 

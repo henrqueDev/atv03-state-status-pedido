@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class TransportadoStatus extends Status{
 
-    TransportadoStatus(Pedido pedido){
+    public TransportadoStatus(Pedido pedido){
         super(pedido);
     }
 

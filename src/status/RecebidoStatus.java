@@ -4,7 +4,7 @@ import pedido.Pedido;
 
 public class RecebidoStatus extends Status{
 
-    RecebidoStatus(Pedido pedido){
+    public RecebidoStatus(Pedido pedido){
         super(pedido);
     }
 
@@ -24,7 +24,7 @@ public class RecebidoStatus extends Status{
 
     @Override
     public String onRecebido() {
-        return "Pedido recebido pelo destinatário!";
+        return "Pedido recebido pelo destinatário! Aguardando cliente finalizar pedido!";
     }
 
     @Override
