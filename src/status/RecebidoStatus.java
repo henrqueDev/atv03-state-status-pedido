@@ -10,13 +10,16 @@ public class RecebidoStatus extends Status{
 
     @Override
     public String onPreparacao() {
-        this.pedido.setStatus(new PreparacaoStatus(this.pedido));
-        return "O pedido foi devolvido para a loja e novo envio realizado!";
+        if(this.pedido.getconfirmacaoEntrega() == false){
+            this.pedido.setStatus(new PreparacaoStatus(this.pedido));
+            return "Pedido não foi aceito pelo destinatário! Devolvendo para a loja para devolução do pedido";
+        }
+        return "Peidod chegou no destinatário e foi confirmado! Aguardando cliente finalizar o pedido";
     }
 
     @Override
     public String onTransporte() {
-        return "Pedido chegou no centro de distribuição";
+        return "Pedido saiu do centro de distribuição e chegou ao destinatário!";
     }
 
     @Override
